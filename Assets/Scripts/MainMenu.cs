@@ -6,16 +6,23 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public int currentLevel;
+    public Animator transition;
     public void PlayButton()
     {
-        Debug.Log("yowkeoy");
-        SceneManager.LoadScene(currentLevel);
+        transition.SetTrigger("Start");
+        StartCoroutine(waitForTime());
     }
     
 
     public void QuitButton()
     {
         Application.Quit();
+    }
+
+    IEnumerator waitForTime()
+    {
+        yield return new WaitForSeconds(1.75f);
+        SceneManager.LoadScene(currentLevel);
     }
 
 
