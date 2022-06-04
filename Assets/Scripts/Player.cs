@@ -71,7 +71,8 @@ public class Player : MonoBehaviour
             offPlanet = false;
         }
         Vector2 towardsPlayer = transform.position - other.transform.position;
-        if (other.relativeVelocity.magnitude > 6.0f && playerRB.velocity.magnitude < 7.0f)
+        if (other.relativeVelocity.magnitude > 6.0f && (playerRB.velocity.magnitude < 7.0f
+            || other.gameObject.GetComponent<BumpyPlanet>()))
         {
             animator.SetTrigger("Collide");
             audioSource.PlayOneShot(crashLandSfx);
@@ -95,7 +96,6 @@ public class Player : MonoBehaviour
 
     public void Launch()
     {
-        
         launched = true;
         Planet closestPlanet = GetClosestPlanet();
         
@@ -121,6 +121,11 @@ public class Player : MonoBehaviour
             playerRB.AddForce(-boostForce * referenceVector, ForceMode2D.Impulse);
         }
         audioSource.PlayOneShot(boostSfxs[Random.Range(0, boostSfxs.Length)]);
+    }
+
+    public void SetVelocity(Vector2 velocity)
+    {
+        playerRB.velocity = velocity;
     }
 
     public void StartLevelTransition(Transform endTransform)
