@@ -11,8 +11,16 @@ public abstract class Planet : MonoBehaviour
     {
         planetRb = GetComponent<Rigidbody2D>();
         var circleCollider = GetComponent<CircleCollider2D>();
-        float radius = circleCollider.radius * transform.localScale.x;
-        planetRb.mass = Mathf.PI * radius * radius;
+        var boxCollider = GetComponent<BoxCollider2D>();
+        if (circleCollider)
+        {
+            float radius = circleCollider.radius * transform.localScale.x;
+            planetRb.mass = Mathf.PI * radius * radius;
+            return;
+        }
+
+        planetRb.mass = boxCollider.size.x * boxCollider.size.y;
+       
     }
 
     // Update is called once per frame
