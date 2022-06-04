@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 2951929908515092610, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -211,6 +215,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 2951929908515092610, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -283,6 +291,10 @@ PrefabInstance:
     - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 2951929908515092610, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_RootOrder
@@ -441,6 +453,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     - target: {fileID: 2951929908515092610, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -513,6 +529,10 @@ PrefabInstance:
     - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 585146135904039323, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 2951929908515092610, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
       propertyPath: m_RootOrder
@@ -670,7 +690,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3b61df25baf6a94bba29bc8d4e95c0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -711,3 +731,4 @@ MonoBehaviour:
   launchForce: 9
   boostForce: 3
   launched: 0
+  offPlanet: 0

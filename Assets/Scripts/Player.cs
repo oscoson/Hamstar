@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float boostForce = 3.0f;
  
     [SerializeField] private bool launched = false;
+    [SerializeField] private bool offPlanet = false;
 
 
     // Start is called before the first frame update
@@ -21,10 +22,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && launched == false)
         {
             Launch();
-        } else if (Input.GetButtonDown("Fire2")) {
+        } 
+        if (Input.GetButtonDown("Fire2") && offPlanet == false) 
+        {
             Boost();
         }
     }
@@ -42,6 +45,26 @@ public class Player : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if(other.gameObject.tag == "Planet")
+        {
+            launched = false;
+            offPlanet = false;
+        }
+
+
+    }
+
+    private void OnCollisionExit2D(Collision2D other) 
+    {
+        if(other.gameObject.tag == "Planet")
+        {
+            offPlanet = true;
+            launched = true;
+        }       
+    }
+
     public void Launch()
     {
         
@@ -56,7 +79,6 @@ public class Player : MonoBehaviour
 
     public void Boost()
     {
-        launched = true;
 
         Planet[] planets = GameObject.FindObjectsOfType<Planet>();
         Planet closestPlanet = planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
