@@ -323,7 +323,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777533, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1230,6 +1230,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1457282206350116357, guid: 077c30c62053f664798c84789558e550, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457282206350116357, guid: 077c30c62053f664798c84789558e550, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -9122005997319530527, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
     - target: {fileID: 7715209868403266596, guid: 077c30c62053f664798c84789558e550, type: 3}
       propertyPath: boostSfx
       value: 
