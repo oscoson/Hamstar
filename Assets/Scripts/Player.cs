@@ -22,11 +22,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && launched == false)
+        if (Input.GetButtonDown("Fire1") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f)
         {
             Launch();
         } 
-        if (Input.GetButtonDown("Fire2") && offPlanet == false) 
+        if (Input.GetButtonDown("Fire2") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f) 
         {
             Boost();
         }
@@ -69,19 +69,16 @@ public class Player : MonoBehaviour
     {
         
         launched = true;
-        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
-        Planet closestPlanet = planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+        Planet closestPlanet = GetClosestPlanet();
         
         playerRB.AddForce(launchForce * (playerRB.position - (Vector2) closestPlanet.transform.position).normalized, ForceMode2D.Impulse);
         //rb.AddForce(((launchForce)) * (playerRB.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
     }
 
-
     public void Boost()
     {
 
-        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
-        Planet closestPlanet = planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+        Planet closestPlanet = GetClosestPlanet();
 
         Vector2 referenceVector = Quaternion.Euler(0, 0, 90) * (transform.position - closestPlanet.transform.position).normalized;
 
@@ -93,5 +90,21 @@ public class Player : MonoBehaviour
         {
             playerRB.AddForce(-boostForce * referenceVector, ForceMode2D.Impulse);
         }
+    }
+
+    private Planet GetClosestPlanet()
+    {
+        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
+        return planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+    }
+
+    private float DistanceToClosestPlanet()
+    {
+        return ((Vector2)(GetClosestPlanet().transform.position - transform.position)).magnitude;
+    }
+
+    private float PlayerPlanetRadiusSum()
+    {
+        return playerRB.GetComponent<CircleCollider2D>().radius * transform.localScale.x + GetClosestPlanet().GetComponent<CircleCollider2D>().radius * GetClosestPlanet().transform.localScale.x;
     }
 }
