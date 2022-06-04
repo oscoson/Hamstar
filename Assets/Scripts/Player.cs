@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private bool offPlanet = false;
     private bool isLevelTransitioning = false;
 
+    public Animator transitionControl;
+
 
     // Start is called before the first frame update
     void Start()
@@ -130,6 +132,7 @@ public class Player : MonoBehaviour
     {
         isLevelTransitioning = true;
         playerRB.simulated = false;
+        transitionControl.SetTrigger("Start");
         StartCoroutine(LevelTransitionCoroutine(endTransform, transform.position, playerRB.rotation));
     }
 
