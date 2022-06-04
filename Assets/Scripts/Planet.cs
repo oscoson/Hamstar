@@ -5,14 +5,16 @@ using UnityEngine;
 public abstract class Planet : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    protected void virtual Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    protected void virtual Update()
     {
         
     }
+
+    public abstract Vector2 GetPullForce();
 }
