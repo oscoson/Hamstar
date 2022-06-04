@@ -74,6 +74,11 @@ public class Player : MonoBehaviour
         }       
     }
 
+    public void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Launch()
     {
         
