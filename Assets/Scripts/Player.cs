@@ -65,7 +65,6 @@ public class Player : MonoBehaviour
         Vector2 towardsPlayer = transform.position - other.transform.position;
         if (other.relativeVelocity.magnitude > 6.0f && playerRB.velocity.magnitude < 7.0f)
         {
-            Debug.Log(playerRB.velocity);
             animator.SetTrigger("Collide");
             audioSource.PlayOneShot(crashLandSfx);
         }
