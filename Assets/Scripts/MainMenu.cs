@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    public int currentLevel;
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        Debug.Log("yowkeoy");
+        SceneManager.LoadScene(currentLevel);
     }
     
 
