@@ -19,7 +19,7 @@ public abstract class Planet : MonoBehaviour
             return;
         }
 
-        planetRb.mass = boxCollider.size.x * boxCollider.size.y;
+        planetRb.mass = boxCollider.size.x * transform.localScale.x * boxCollider.size.y * transform.localScale.y;
        
     }
 
