@@ -8,9 +8,15 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D playerRB;
     Animator animator;
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] boostSfxs; 
+    [SerializeField] AudioClip launchSfx;
+    [SerializeField] AudioClip crashLandSfx;
+
+
     [SerializeField] private float launchForce = 9.0f;
     [SerializeField] private float boostForce = 3.0f;
- 
+
     [SerializeField] private bool launched = false;
     [SerializeField] private bool offPlanet = false;
 
@@ -20,6 +26,7 @@ public class Player : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,9 +62,17 @@ public class Player : MonoBehaviour
             launched = false;
             offPlanet = false;
         }
-        if(other.relativeVelocity.magnitude > 10.0f) animator.SetTrigger("Collide");
+        Vector2 towardsPlayer = transform.position - other.transform.position;
+        if (other.relativeVelocity.magnitude > 6.0f && playerRB.velocity.magnitude < 7.0f)
+        {
+            Debug.Log(playerRB.velocity);
+            animator.SetTrigger("Collide");
+            audioSource.PlayOneShot(crashLandSfx);
+        }
+        
 
-        if(other.gameObject.tag == "Goal")
+
+        if (other.gameObject.tag == "Goal")
         {
             int buildIndex = SceneManager.GetActiveScene().buildIndex;
             if (++buildIndex == SceneManager.sceneCountInBuildSettings) buildIndex = 0;
@@ -87,6 +102,8 @@ public class Player : MonoBehaviour
         
         playerRB.AddForce(launchForce * (playerRB.position - (Vector2) closestPlanet.transform.position).normalized, ForceMode2D.Impulse);
         //rb.AddForce(((launchForce)) * (playerRB.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
+
+        audioSource.PlayOneShot(launchSfx);
     }
 
     public void Boost()
@@ -104,6 +121,7 @@ public class Player : MonoBehaviour
         {
             playerRB.AddForce(-boostForce * referenceVector, ForceMode2D.Impulse);
         }
+        audioSource.PlayOneShot(boostSfxs[Random.Range(0, boostSfxs.Length)]);
     }
 
     private Planet GetClosestPlanet()
