@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool launched = false;
     [SerializeField] private bool offPlanet = false;
+    private bool isLevelTransitioning = false;
 
 
     // Start is called before the first frame update
@@ -32,27 +33,32 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f)
+        if (!isLevelTransitioning)
         {
-            Launch();
-        } 
-        if (Input.GetButtonDown("Fire2") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f) 
-        {
-            Boost();
+            if (Input.GetButtonDown("Fire1") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f)
+            {
+                Launch();
+            }
+            if (Input.GetButtonDown("Fire2") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f)
+            {
+                Boost();
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
+        if (!isLevelTransitioning)
+        {
+            Planet[] planets = GameObject.FindObjectsOfType<Planet>();
 
-        Vector2 netForce = Vector2.zero;
-        foreach (var planet in planets){
-            netForce += planet.GetPullForce(playerRB);
+            Vector2 netForce = Vector2.zero;
+            foreach (var planet in planets)
+            {
+                netForce += planet.GetPullForce(playerRB);
+            }
+            playerRB.AddForce(netForce);
         }
-
-        playerRB.AddForce(netForce);
-
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
@@ -69,14 +75,6 @@ public class Player : MonoBehaviour
             audioSource.PlayOneShot(crashLandSfx);
         }
         
-
-
-        if (other.gameObject.tag == "Goal")
-        {
-            int buildIndex = SceneManager.GetActiveScene().buildIndex;
-            if (++buildIndex == SceneManager.sceneCountInBuildSettings) buildIndex = 0;
-            SceneManager.LoadScene(buildIndex);
-        }
     }
 
     private void OnCollisionExit2D(Collision2D other) 
@@ -121,6 +119,48 @@ public class Player : MonoBehaviour
             playerRB.AddForce(-boostForce * referenceVector, ForceMode2D.Impulse);
         }
         audioSource.PlayOneShot(boostSfxs[Random.Range(0, boostSfxs.Length)]);
+    }
+
+    public void StartLevelTransition(Transform endTransform)
+    {
+        isLevelTransitioning = true;
+        playerRB.simulated = false;
+        StartCoroutine(LevelTransitionCoroutine(endTransform, transform.position, playerRB.rotation));
+    }
+
+    IEnumerator LevelTransitionCoroutine(Transform endTransform, Vector2 startPosition, float startingRotation)
+    {
+        const float snapSpeed = 2.0f;
+        Vector2 travelDirection = endTransform.position - transform.position;
+        Vector2 futureDirection = (Vector2)endTransform.position - ((Vector2)transform.position + travelDirection.normalized * snapSpeed * Time.deltaTime);
+        while (Vector2.Dot(travelDirection,futureDirection) > 0.0f)
+        {
+            travelDirection = endTransform.position - transform.position;
+            futureDirection = (Vector2)endTransform.position - ((Vector2)transform.position + travelDirection.normalized * snapSpeed * Time.deltaTime);
+
+            Vector2 refVec = (Vector2) endTransform.position - startPosition;
+            Vector2 casterVec = (Vector2)transform.position - startPosition;
+            Vector2 projVec = Vector2.Dot(casterVec, refVec.normalized) * refVec.normalized;
+            float lerpRatio = projVec.magnitude / refVec.magnitude;
+
+            transform.eulerAngles = new Vector3(0, 0, Mathf.LerpAngle(startingRotation, 0, lerpRatio));
+
+            transform.position = (Vector2) transform.position + travelDirection.normalized * snapSpeed * Time.deltaTime;
+            yield return null;
+        }
+
+        while(transform.localScale.x > 0.0f)
+        {
+            transform.localScale -= Vector3.one * Time.deltaTime;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        if (++buildIndex == SceneManager.sceneCountInBuildSettings) buildIndex = 0;
+        SceneManager.LoadScene(buildIndex);
+
     }
 
     private Planet GetClosestPlanet()
