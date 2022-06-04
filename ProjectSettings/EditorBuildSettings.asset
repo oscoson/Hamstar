@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 5e7f1ac032d0db24f91be8883624fcd6
   - enabled: 1
-    path: Assets/Scenes/Brian's Scene.unity
-    guid: fb825c57f56a70b4381efef157999d11
+    path: Assets/Scenes/Level 1.unity
+    guid: a54c87d796ac3b043bd211f2e87854a1
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: ea87a9a25c3b79f4698114f5598dac60
   m_configObjects: {}
