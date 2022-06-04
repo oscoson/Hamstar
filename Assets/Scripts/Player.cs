@@ -6,6 +6,7 @@ using System.Linq;
 public class Player : MonoBehaviour
 {
     Rigidbody2D playerRB;
+    Animator animator;
     [SerializeField] private float launchForce = 9.0f;
     [SerializeField] private float boostForce = 3.0f;
  
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,7 +54,8 @@ public class Player : MonoBehaviour
             launched = false;
             offPlanet = false;
         }
-
+        if(other.relativeVelocity.magnitude > 10.0f)animator.SetTrigger("Collide");
+        Debug.Log(other.relativeVelocity.magnitude);
 
     }
 
