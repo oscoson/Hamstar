@@ -6,8 +6,8 @@ using System.Linq;
 public class Player : MonoBehaviour
 {
     Rigidbody2D playerRB;
-    [SerializeField] private float launchForce = 10.0f;
-    [SerializeField] private float boostForce = 10.0f;
+    [SerializeField] private float launchForce = 9.0f;
+    [SerializeField] private float boostForce = 3.0f;
  
     [SerializeField] private bool launched = false;
 
@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Launch();
+        } else if (Input.GetButtonDown("Fire2")) {
+            Boost();
         }
     }
 
@@ -51,4 +53,23 @@ public class Player : MonoBehaviour
         //rb.AddForce(((launchForce)) * (playerRB.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
     }
 
+
+    public void Boost()
+    {
+        launched = true;
+
+        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
+        Planet closestPlanet = planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+
+        Vector2 referenceVector = Quaternion.Euler(0, 0, 90) * (transform.position - closestPlanet.transform.position).normalized;
+
+        if(Vector2.Dot(referenceVector, playerRB.velocity) > 0)
+        {
+            playerRB.AddForce(boostForce * referenceVector, ForceMode2D.Impulse);
+        }
+        else
+        {
+            playerRB.AddForce(-boostForce * referenceVector, ForceMode2D.Impulse);
+        }
+    }
 }
