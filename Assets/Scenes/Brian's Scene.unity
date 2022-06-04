@@ -323,7 +323,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777533, y: 1}
+    m_SensorSize: {x: 1.7774245, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -898,6 +898,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea80ce5e5fc6b04cb5b2b6553b99788, type: 3}
+--- !u!1 &1732491022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 585146135904039323, guid: f5c9017f5ee1f3a47ae59e777a1d5f8d, type: 3}
+  m_PrefabInstance: {fileID: 4816331195565137480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732491028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732491022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb886d1fe2ac10a48ad923cf76293b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1875204288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,7 +1238,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8683625763169528048, guid: f5c9017f5ee1f3a47ae59e777a1d5f8d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4570737156225436224, guid: f5c9017f5ee1f3a47ae59e777a1d5f8d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5c9017f5ee1f3a47ae59e777a1d5f8d, type: 3}
 --- !u!1001 &7715209869869708926
 PrefabInstance:
