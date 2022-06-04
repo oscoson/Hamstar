@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
     Rigidbody2D playerRB;
-    [SerializeField] private float launchForce = 2000.0f;
-
+    [SerializeField] private float launchForce = 10.0f;
+    [SerializeField] private float boostForce = 10.0f;
+ 
     [SerializeField] private bool launched = false;
 
 
@@ -42,7 +44,11 @@ public class Player : MonoBehaviour
     {
         
         launched = true;
-        Rigidbody2D rb = playerRB.GetComponent<Rigidbody2D>();
-        rb.AddForce(((launchForce)) * (playerRB.position - (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
+        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
+        Planet closestPlanet = planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+        
+        playerRB.AddForce(launchForce * (playerRB.position - (Vector2) closestPlanet.transform.position).normalized, ForceMode2D.Impulse);
+        //rb.AddForce(((launchForce)) * (playerRB.position - (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
     }
+
 }
