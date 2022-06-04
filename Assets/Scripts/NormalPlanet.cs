@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class NormalPlanet : Planet
 {
-    Rigidbody2D planetRb;
-    protected override void Start()
-    {
-        planetRb = GetComponent<Rigidbody2D>();   
-    }
 
     public override Vector2 GetPullForce(Rigidbody2D rb)
     {

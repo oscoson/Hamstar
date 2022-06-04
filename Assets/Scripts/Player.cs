@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D playerRB;
-    [SerializeField] private float launchSpeed = 4.0f;
+    [SerializeField] private float launchForce = 2000.0f;
 
     [SerializeField] private bool launched = false;
 
@@ -40,8 +40,9 @@ public class Player : MonoBehaviour
 
     public void Launch()
     {
+        
         launched = true;
         Rigidbody2D rb = playerRB.GetComponent<Rigidbody2D>();
-        rb.AddForce(-(launchSpeed) * playerRB.position, ForceMode2D.Impulse);
+        rb.AddForce(((launchForce)) * (playerRB.position - (Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized, ForceMode2D.Impulse);
     }
 }
