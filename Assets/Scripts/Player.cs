@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
 
         playerRB.AddForce(netForce);
 
-        
     }
 
     public void Launch()
