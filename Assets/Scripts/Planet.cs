@@ -16,5 +16,5 @@ public abstract class Planet : MonoBehaviour
         
     }
 
-    public abstract Vector2 GetPullForce();
+    public abstract Vector2 GetPullForce(Rigidbody2D rb);
 }
