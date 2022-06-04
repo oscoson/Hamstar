@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -54,9 +55,14 @@ public class Player : MonoBehaviour
             launched = false;
             offPlanet = false;
         }
-        if(other.relativeVelocity.magnitude > 10.0f)animator.SetTrigger("Collide");
-        Debug.Log(other.relativeVelocity.magnitude);
+        if(other.relativeVelocity.magnitude > 10.0f) animator.SetTrigger("Collide");
 
+        if(other.gameObject.tag == "Goal")
+        {
+            int buildIndex = SceneManager.GetActiveScene().buildIndex;
+            if (++buildIndex == SceneManager.sceneCountInBuildSettings) buildIndex = 0;
+            SceneManager.LoadScene(buildIndex);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other) 
