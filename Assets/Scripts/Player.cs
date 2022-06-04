@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D playerRB;
-    [SerializeField] private float launchSpeed = 5f;
+    Rigidbody2D playerRB;
+    [SerializeField] private float launchSpeed = 4.0f;
 
     [SerializeField] private bool launched = false;
 
@@ -13,23 +13,28 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerRB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Launch();
+        }
     }
 
     private void FixedUpdate()
     {
-        var thing = GameObject.FindObjectOfType<Planet>();
+        Planet[] planets = GameObject.FindObjectsOfType<Planet>();
 
-        if(Input.GetButtonDown("Fire1") && !(launched))
-        {
-            Launch();
+        Vector2 netForce = Vector2.zero;
+        foreach (var planet in planets){
+            netForce += planet.GetPullForce(playerRB);
         }
+
+        playerRB.AddForce(netForce);
 
         
     }
