@@ -19,19 +19,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetButtonDown("Fire1") && !(launched))
+        {
+            Launch();
+        }
     }
 
     private void FixedUpdate()
     {
         var thing = GameObject.FindObjectOfType<Planet>();
 
-        if(Input.GetButtonDown("Fire1") && !(launched))
-        {
-            Launch();
-        }
 
-        
     }
 
     public void Launch()
