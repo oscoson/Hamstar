@@ -43,6 +43,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if (!isLevelTransitioning)
         {
             if (Input.GetButtonDown("Fire1") && DistanceToClosestPlanet() < PlayerPlanetRadiusSum() + 0.2f)
@@ -73,14 +78,12 @@ public class Player : MonoBehaviour
             }
             playerRB.AddForce(netForce);
         } 
+
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.gameObject.tag == "Planet")
-        {
-            //Empty
-        }
+
         Vector2 towardsPlayer = transform.position - other.transform.position;
         if (other.relativeVelocity.magnitude > 6.0f && (playerRB.velocity.magnitude < 7.0f
             || other.gameObject.GetComponent<BumpyPlanet>()))
@@ -116,6 +119,7 @@ public class Player : MonoBehaviour
         playerRB.simulated = true;
         transform.position = spawnPoint.position;
         playerRB.velocity = Vector3.zero;
+        this.GetComponent<TrailRenderer>().Clear();
     }
 
     public void Launch()
