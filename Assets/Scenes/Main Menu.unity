@@ -356,6 +356,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: 1
   transition: {fileID: 542419743}
+  masterMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
+  musicMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
+  soundMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
 --- !u!1 &87972644
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +578,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1924564252}
   m_HandleRect: {fileID: 1808756494}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -50
   m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: -20
@@ -1717,7 +1720,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 80447836}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -2175,7 +2178,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1320236390}
   m_HandleRect: {fileID: 279301116}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -50
   m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: -20
@@ -3365,7 +3368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 80447836}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: PlayButton
         m_Mode: 1
@@ -4302,7 +4305,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1973972653}
   m_HandleRect: {fileID: 1005522135}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -30
   m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: -10
