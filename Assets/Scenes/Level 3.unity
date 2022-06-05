@@ -348,22 +348,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!1001 &50691092
@@ -420,22 +404,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -766,22 +734,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -1325,55 +1277,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
---- !u!1 &542869954
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 542869955}
-  m_Layer: 0
-  m_Name: Spawn Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &542869955
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542869954}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.67, y: -10.23, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &578219825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1428,22 +1333,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -1693,22 +1582,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!4 &648265890 stripped
@@ -1881,6 +1754,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1984098850, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
 --- !u!4 &735764603 stripped
@@ -1914,7 +1803,7 @@ PrefabInstance:
     - target: {fileID: 7715209868403266596, guid: 077c30c62053f664798c84789558e550, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 542869955}
+      objectReference: {fileID: 0}
     - target: {fileID: 7715209868403266596, guid: 077c30c62053f664798c84789558e550, type: 3}
       propertyPath: crashLandSfx
       value: 
@@ -2258,22 +2147,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!1001 &932358433
@@ -2342,6 +2215,22 @@ PrefabInstance:
     - target: {fileID: 7077834313970625420, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -340047268, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
@@ -2603,22 +2492,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!1001 &1044016023
@@ -2675,22 +2548,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -2948,22 +2805,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!4 &1277933256 stripped
@@ -3185,22 +3026,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceMine (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
 --- !u!4 &1371122913 stripped
@@ -3331,6 +3156,22 @@ PrefabInstance:
     - target: {fileID: 7077834313970625420, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -340047268, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
@@ -3780,7 +3621,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7782805, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3864,22 +3705,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -4093,22 +3918,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
@@ -4728,22 +4537,6 @@ PrefabInstance:
     - target: {fileID: 1289980296521303033, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
       propertyPath: m_Name
       value: SpaceMine (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c82c659126cc3be4198683110fe440f4, type: 3}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6153035123967693190, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3733025f12b2764ab417b3e90d56dee, type: 3}
