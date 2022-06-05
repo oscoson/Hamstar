@@ -7,6 +7,7 @@ public class SpaceMine : MonoBehaviour
     SpriteRenderer spriteRenderer;
     private float blinkTimer;
     private const float blinkTime = 3.0f;
+    public Animator explode;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,8 @@ public class SpaceMine : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>().Die();
+            explode.SetTrigger("explode");
+            collision.gameObject.GetComponent<Player>().Die(); 
         }
     }
 }
