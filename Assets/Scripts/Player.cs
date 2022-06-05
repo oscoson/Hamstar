@@ -16,10 +16,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float launchForce = 9.0f;
     [SerializeField] private float boostForce = 3.0f;
-
-    [SerializeField] private bool launched = false;
-    [SerializeField] private bool offPlanet = false;
     private bool isLevelTransitioning = false;
+    public Transform spawnPoint;
+
 
     public Animator transitionControl;
 
@@ -67,8 +66,7 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Planet")
         {
-            launched = false;
-            offPlanet = false;
+            //Empty
         }
         Vector2 towardsPlayer = transform.position - other.transform.position;
         if (other.relativeVelocity.magnitude > 6.0f && (playerRB.velocity.magnitude < 7.0f
@@ -84,19 +82,17 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "Planet")
         {
-            offPlanet = true;
-            launched = true;
+                //Empty
         }       
     }
 
     public void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        transform.position = spawnPoint.position;
     }
 
     public void Launch()
     {
-        launched = true;
         Planet closestPlanet = GetClosestPlanet();
         
         playerRB.AddForce(launchForce * (playerRB.position - (Vector2) closestPlanet.transform.position).normalized, ForceMode2D.Impulse);
