@@ -2026,6 +2026,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1841962593}
     - target: {fileID: 7715209868403266596, guid: 077c30c62053f664798c84789558e550, type: 3}
+      propertyPath: hamsterDeathEffect
+      value: 
+      objectReference: {fileID: 2571619851321427403, guid: 53e574eadefef5c4597350a814673ed5, type: 3}
+    - target: {fileID: 7715209868403266596, guid: 077c30c62053f664798c84789558e550, type: 3}
       propertyPath: boostSfxs.Array.size
       value: 13
       objectReference: {fileID: 0}
