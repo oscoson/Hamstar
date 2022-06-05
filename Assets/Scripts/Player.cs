@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip[] boostSfxs; 
     [SerializeField] AudioClip launchSfx;
     [SerializeField] AudioClip crashLandSfx;
-
     SpriteRenderer spriteRenderer;
 
 
@@ -21,7 +20,7 @@ public class Player : MonoBehaviour
     private bool isLevelTransitioning = false;
     private Transform spawnPoint;
 
-
+    public GameObject hamsterDeathEffect;
     public Animator transitionControl;
 
 
@@ -108,6 +107,7 @@ public class Player : MonoBehaviour
 
     IEnumerator DieCoroutine()
     {
+        Instantiate(hamsterDeathEffect, transform.position, Quaternion.identity);
         playerRB.simulated = false;
         spriteRenderer.enabled = false;
         yield return new WaitForSeconds(1.0f);
