@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         transform.position = spawnPoint.position;
+        playerRB.velocity = Vector3.zero;
     }
 
     public void Launch()
