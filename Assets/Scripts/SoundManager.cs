@@ -17,11 +17,10 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        // Default value of getint is apparently 1
+        //Playerprefs will save your preferred settings everytime
         Debug.Log(PlayerPrefs.GetInt("HasChanged", 0));
         if(PlayerPrefs.GetInt("HasChanged", 0) == 0)
         {
-            Debug.Log("Changed! Reset Changed Values");
             LoadValues();
         }
     }
@@ -39,7 +38,6 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", volume);
         musicVolumeSlider.value = volume;
         PlayerPrefs.SetInt("HasChanged", 0);
-        Debug.Log(PlayerPrefs.GetInt("HasChanged", 1245));
     }
 
     public void SetSound (float volume)
