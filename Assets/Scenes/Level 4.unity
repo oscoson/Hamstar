@@ -3236,10 +3236,10 @@ Transform:
   - {fileID: 944621042}
   - {fileID: 1975634283}
   - {fileID: 1558956327}
-  - {fileID: 735764603}
   - {fileID: 103948833}
   - {fileID: 1998912308}
   - {fileID: 1104711723}
+  - {fileID: 735764603}
   - {fileID: 526336169}
   - {fileID: 626243667}
   - {fileID: 932358434}
@@ -3376,6 +3376,10 @@ PrefabInstance:
     - target: {fileID: 8714179946575145348, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
       propertyPath: m_Name
       value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714179946575145348, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8714179946575145349, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
       propertyPath: m_RootOrder

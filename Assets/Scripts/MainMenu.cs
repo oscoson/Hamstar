@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public Animator transition;
     public void PlayButton()
     {
+        transition.SetTrigger("Start");
         StartCoroutine(waitForTime());
     }
     
@@ -20,8 +21,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator waitForTime()
     {
-        transition.SetTrigger("Start");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.75f);
         SceneManager.LoadScene(currentLevel);
     }
 
