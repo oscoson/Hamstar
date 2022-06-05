@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 157194073c419d04b8a37264a91ac898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 157194073c419d04b8a37264a91ac898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3202,6 +3202,9 @@ MonoBehaviour:
   masterMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
   musicMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
   soundMixer: {fileID: 24100000, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
+  masterVolumeSlider: {fileID: 1931232077}
+  musicVolumeSlider: {fileID: 115355683}
+  soundVolumeSlider: {fileID: 747797993}
 --- !u!1 &1442807838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4037,7 +4040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 157194073c419d04b8a37264a91ac898, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4471,6 +4474,10 @@ PrefabInstance:
     - target: {fileID: 8714179946575145348, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
       propertyPath: m_Name
       value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714179946575145348, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8714179946575145349, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
       propertyPath: m_RootOrder
