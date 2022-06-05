@@ -1785,6 +1785,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1984098850, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
 --- !u!4 &735764603 stripped
@@ -2230,6 +2246,22 @@ PrefabInstance:
     - target: {fileID: 7077834313970625420, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -340047268, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
@@ -3156,6 +3188,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -340047268, guid: bb35f54d089adc54cad9bff1ea839fad, type: 3}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077834313970625421, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca54c18e53a4a4c9dd39464ad77b8e, type: 3}
 --- !u!4 &1454668302 stripped
@@ -3604,7 +3652,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7782805, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

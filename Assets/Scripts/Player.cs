@@ -170,7 +170,12 @@ public class Player : MonoBehaviour
     private Planet GetClosestPlanet()
     {
         Planet[] planets = GameObject.FindObjectsOfType<Planet>();
-        return planets.OrderBy(planet => ((Vector2)(planet.transform.position - transform.position)).sqrMagnitude).First();
+
+        return planets.OrderBy(planet => 
+        ((Vector2)(planet.transform.position - transform.position)).magnitude -
+        (planet.transform.GetComponent<CircleCollider2D>().radius * planet.transform.localScale.x +
+        transform.GetComponent<CircleCollider2D>().radius * transform.localScale.x)
+        ).First();
     }
 
     private float DistanceToClosestPlanet()
