@@ -13,6 +13,4 @@ public class BumpyPlanet : Planet
 
         return (G * rb.mass * planetRb.mass / lengthSqr) * normDirection;
     }
-
-
 }

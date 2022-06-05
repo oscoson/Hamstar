@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float launchForce = 9.0f;
     [SerializeField] private float boostForce = 3.0f;
     private bool isLevelTransitioning = false;
-    public Transform spawnPoint;
+    private Transform spawnPoint;
 
 
     public Animator transitionControl;
@@ -29,7 +29,13 @@ public class Player : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        GameObject spawnPointObject = new GameObject();
+        spawnPointObject.transform.position = transform.position;
+        spawnPoint = spawnPointObject.transform;
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -52,11 +58,15 @@ public class Player : MonoBehaviour
         if (!isLevelTransitioning)
         {
             Planet[] planets = GameObject.FindObjectsOfType<Planet>();
+            Debug.Log(planets.Length);
 
             Vector2 netForce = Vector2.zero;
             foreach (var planet in planets)
             {
+                Debug.Log(planet);
                 netForce += planet.GetPullForce(playerRB);
+                Debug.Log(netForce);
+
             }
             playerRB.AddForce(netForce);
         }

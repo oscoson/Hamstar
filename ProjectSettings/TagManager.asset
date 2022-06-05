@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Planet
   - Goal
+  - Spawn Point
   layers:
   - Default
   - TransparentFX
