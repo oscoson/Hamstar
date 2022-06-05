@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
     public Slider soundVolumeSlider;
 
 
-    void Start()
+    void Awake()
     {
         //Playerprefs will save your preferred settings everytime
         Debug.Log(PlayerPrefs.GetInt("HasChanged", 0));
