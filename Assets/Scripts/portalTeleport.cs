@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class portalTeleport : MonoBehaviour
 {
-    private portalTeleport destination;
-    public bool isEndPortal;
+    [SerializeField] private GameObject destination;
     public float distance = 0.2f;
     private float timeStart = 1; // 1 Second teleportation cooldown
     private float timer = 0;
@@ -20,13 +19,7 @@ public class portalTeleport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(isEndPortal == false)
-        {
-            destination = GameObject.FindGameObjectWithTag("portalEnd").GetComponent<portalTeleport>();
-        } else
-        {
-            destination = GameObject.FindGameObjectWithTag("portalStart").GetComponent<portalTeleport>();
-        }
+
     }
 
     // Update is called once per frame
@@ -35,6 +28,7 @@ public class portalTeleport : MonoBehaviour
     {
         timer -= Time.deltaTime;
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (Vector2.Distance(transform.position, other.transform.position) > distance)
