@@ -45,7 +45,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
         {
-            SceneManager.LoadScene(0);
+            transitionControl.SetTrigger("Start");
+            StartCoroutine(MainMenuLoadTime());
         }
 
         if (!isLevelTransitioning)
@@ -217,5 +218,13 @@ public class Player : MonoBehaviour
     private float PlayerPlanetRadiusSum()
     {
         return playerRB.GetComponent<CircleCollider2D>().radius * transform.localScale.x + GetClosestPlanet().GetComponent<CircleCollider2D>().radius * GetClosestPlanet().transform.localScale.x;
+    }
+
+
+    IEnumerator MainMenuLoadTime()
+    {
+        yield return new WaitForSeconds(2.5f);
+        // Loads Main Menu
+        SceneManager.LoadScene(0);
     }
 }
