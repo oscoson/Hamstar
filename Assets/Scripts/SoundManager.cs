@@ -17,10 +17,11 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+        // Default value of getint is apparently 1
         Debug.Log(PlayerPrefs.GetInt("HasChanged", 0));
         if(PlayerPrefs.GetInt("HasChanged", 0) == 0)
         {
-            Debug.Log("Change!");
+            Debug.Log("Changed! Reset Changed Values");
             LoadValues();
         }
     }
