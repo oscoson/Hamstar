@@ -142,6 +142,7 @@ MonoBehaviour:
   boostSfxs: []
   launchSfx: {fileID: 0}
   crashLandSfx: {fileID: 0}
+  boomSfx: {fileID: 8300000, guid: de66ea48ae4d99948b84f078768354d6, type: 3}
   launchForce: 9
   boostForce: 3
   hamsterDeathEffect: {fileID: 0}
@@ -175,7 +176,7 @@ AudioSource:
   m_GameObject: {fileID: 7715209868403266603}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -9122005997319530527, guid: 0f27cb7e51b7fb748913f35c5a3c61e6, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

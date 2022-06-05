@@ -6,8 +6,6 @@ public class SpaceMine : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
 
-    AudioSource audioSource;
-    [SerializeField] AudioClip boomSfx;
     private float blinkTimer;
     private const float blinkTime = 3.0f;
     public Animator explode;
@@ -16,7 +14,6 @@ public class SpaceMine : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         blinkTimer = blinkTime;
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,7 +41,6 @@ public class SpaceMine : MonoBehaviour
         {
             explode.SetTrigger("explode");
             collision.gameObject.GetComponent<Player>().Die();
-            audioSource.PlayOneShot(boomSfx);
         }
     }
 }

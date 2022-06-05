@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip[] boostSfxs; 
     [SerializeField] AudioClip launchSfx;
     [SerializeField] AudioClip crashLandSfx;
+    [SerializeField] AudioClip boomSfx;
+
     SpriteRenderer spriteRenderer;
 
 
@@ -118,6 +120,7 @@ public class Player : MonoBehaviour
     {
         isDying = true;
         Instantiate(hamsterDeathEffect, transform.position, Quaternion.identity);
+        audioSource.PlayOneShot(boomSfx);
         playerRB.simulated = false;
         spriteRenderer.enabled = false;
         yield return new WaitForSeconds(1.0f);
