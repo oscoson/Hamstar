@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6047e41f37b0b34591efe556c32bdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
+  objs: []
   speed: 1.02
 --- !u!120 &8432552175833681538
 LineRenderer:
