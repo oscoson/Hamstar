@@ -1804,6 +1804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cc87440c2494946bc2b0916b9f9989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boomSfx: {fileID: 0}
   explode: {fileID: 0}
 --- !u!61 &294480763
 BoxCollider2D:
@@ -7919,6 +7920,10 @@ PrefabInstance:
     - target: {fileID: 8714179946575145349, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714179946851341680, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -816
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ed981c0b7bdf2f43857b8ee6dd5bfba, type: 3}
