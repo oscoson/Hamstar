@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip launchSfx;
     [SerializeField] AudioClip crashLandSfx;
 
+    SpriteRenderer spriteRenderer;
+
 
     [SerializeField] private float launchForce = 9.0f;
     [SerializeField] private float boostForce = 3.0f;
@@ -33,6 +35,8 @@ public class Player : MonoBehaviour
         GameObject spawnPointObject = new GameObject();
         spawnPointObject.transform.position = transform.position;
         spawnPoint = spawnPointObject.transform;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -69,7 +73,7 @@ public class Player : MonoBehaviour
 
             }
             playerRB.AddForce(netForce);
-        }
+        } 
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
@@ -98,6 +102,18 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        StartCoroutine(DieCoroutine());
+        
+    }
+
+    IEnumerator DieCoroutine()
+    {
+        playerRB.simulated = false;
+        spriteRenderer.enabled = false;
+        yield return new WaitForSeconds(1.0f);
+        spriteRenderer.enabled = true;
+
+        playerRB.simulated = true;
         transform.position = spawnPoint.position;
         playerRB.velocity = Vector3.zero;
     }
