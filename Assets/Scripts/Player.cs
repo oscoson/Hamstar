@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     private bool isLevelTransitioning = false;
     private Transform spawnPoint;
 
+    bool isDying = false;
+
     public GameObject hamsterDeathEffect;
     public Animator transitionControl;
 
@@ -47,6 +49,10 @@ public class Player : MonoBehaviour
         {
             transitionControl.SetTrigger("Start");
             StartCoroutine(MainMenuLoadTime());
+        }
+        if(Input.GetKeyDown(KeyCode.R) && SceneManager.GetActiveScene().buildIndex != 0 && !isDying)
+        {
+            Die();
         }
 
         if (!isLevelTransitioning)
@@ -106,11 +112,11 @@ public class Player : MonoBehaviour
     public void Die()
     {
         StartCoroutine(DieCoroutine());
-        
     }
 
     IEnumerator DieCoroutine()
     {
+        isDying = true;
         Instantiate(hamsterDeathEffect, transform.position, Quaternion.identity);
         playerRB.simulated = false;
         spriteRenderer.enabled = false;
@@ -121,6 +127,7 @@ public class Player : MonoBehaviour
         transform.position = spawnPoint.position;
         playerRB.velocity = Vector3.zero;
         this.GetComponent<TrailRenderer>().Clear();
+        isDying = false;
     }
 
     public void Launch()
