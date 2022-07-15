@@ -1,4 +1,9 @@
 # Queen-s-Game-Jam-2022 <br />
+### Playable Demo: https://oscosan.itch.io/hamstar <br />
 This game was made as a submission for the Queen's University 2022  Summer Game Jam <br />
-### Playable Demo: https://oscosan.itch.io/hamstar
+Developed by: <br />
+Brian Cho <br />
+Dylan Walker <br />
+Oscar San <br />
+Schuyler Good
 
