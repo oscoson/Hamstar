@@ -5,5 +5,7 @@ Developed by: <br />
 Brian Cho <br />
 Dylan Walker <br />
 Oscar San <br />
-Schuyler Good
+Schuyler Good <br />
+### Final Results Announcement Post: 
+https://www.linkedin.com/posts/qgdc_submissions-to-queens-game-jam-2022-activity-6956359910590734336-h3hL?utm_source=linkedin_share&utm_medium=member_desktop_web
 
